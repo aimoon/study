@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+*{
+	margin:0px 0px;
+	padding:0px 0px;
+}
+div { 
+	border: 1px solid blue;
+}
+
+div.canvas{
+	border: 1px solid blue;
+	float:left;
+	width:800px;
+	height:600px;
+}
+.canvaselement{
+	border: 1px solid blue;
+}
+
+div.panel{
+float:right;
+	height:600px;
+	width:250px;
+}
+
+#popuproad,#blockpopup{/*路弹出框*/
+    position:absolute;
+	left:450px;
+	top:200px;
+	display:none;
+	background-color:gray;
+ }
+#property{
+	/*属性面板*/
+	clear:both;
+	height:200px;
+	display:none;
+}
+
+</style>
+</head>
+<body>
+	<div class="canvas" width="800" height="600" >
+	<canvas id="canvaselement" class="canvaselement" height="600" width="800"></canvas>
+	</div>
+		<div id="panel" class="panel">
+			<div id="road" draggable="true">道路</div>
+			<div id="block" draggable="true">障碍物</div>
+			<div id="" draggable="true">人物</div>
+			<div draggable="true">敌人</div>
+		</div>
+		<div id="popuproad">
+			<table>
+				<tr>
+					<td>定位</td>
+					<td>
+						<select>
+							<option value="position">position</option>
+							<option value="relative">relative</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>宽</td>
+					<td><input id="width" type="text" >px</td>
+				</tr>
+				<tr>
+					<td>高</td>
+					<td><input id="height" type="text" >px</td>
+				</tr>
+				<tr>
+					<td>left</td>
+					<td><input id="left" type="text" >px</td>
+				</tr>
+				<tr>
+					<td>top</td>
+					<td><input id="top" type="text" >px</td>
+				</tr>
+				<tr>
+					<td>background-color</td>
+					<td><input type="text" ></td>
+				</tr>
+				<tr>
+					<td>background-img(path)</td>
+					<td><input type="file" ></td>
+				</tr>
+				<tr>
+					<td><input class ="save" type="button" value="确定"></td>
+					<td><input class="cancel" type="button" value="取消"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="blockpopup">
+			<table>
+				<tr>
+					<td>image-src</td>
+					<td><input id='src' type="file"></td>
+				</tr>
+				<tr>
+					<td>width</td>
+					<td><input type="text" id="width"></td>
+				</tr>
+				<tr>
+					<td>height</td>
+					<td><input type="text" id="height"></td>
+				</tr>
+				<tr>
+					<td>left</td>
+					<td><input type="text" id="left"></td>
+				</tr>
+				<tr>
+					<td>top</td>
+					<td><input type="text" id="top"></td>
+				</tr>
+				<tr>
+					<td><input class ="save" type="button" value="确定"></td>
+					<td><input class="cancel" type="button" value="取消"></td>
+				</tr>
+				<tr>
+					<td><input class ="save" type="button" value="确定"></td>
+					<td><input class="cancel" type="button" value="取消"></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<div id="property">
+			<table>
+								<tr>
+					<td>width</td>
+					<td><input type="text" id="width"></td>
+				</tr>
+				<tr>
+					<td>height</td>
+					<td><input type="text" id="height"></td>
+				</tr>
+				<tr>
+					<td>left</td>
+					<td><input type="text" id="left"></td>
+				</tr>
+				<tr>
+					<td>top</td>
+					<td><input type="text" id="top"></td>
+				</tr>
+			</table>				
+		</div>
+<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../js/hidpi-canvas.js"></script>
+ <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+
+<!-- --><script type="text/javascript" src="../js/layout.js"></script>
+<script type="text/javascript">
+/*(function(){
+				var canvas = document.getElementById('canvaselement'),
+				ctx = canvas.getContext('2d');
+				var img=new Image();
+			img.src="..\\img\\fire_stand_zheng_nan\\50.jpg";
+			img.onload=function(){
+			ctx.drawImage(img,0,0);}
+})()*/
+
+</script>
+</body>
+</html>

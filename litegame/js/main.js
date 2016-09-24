@@ -19,6 +19,7 @@
 		img.src="..\\img\\fire_stand_zheng_nan\\49.jpg";
 					 
 		Canvas.cav3.drawImage(img,0,0);
+		console.log("init log");
 	}
 	hero.prototype.walk=function(){
 		var img=new Image();
